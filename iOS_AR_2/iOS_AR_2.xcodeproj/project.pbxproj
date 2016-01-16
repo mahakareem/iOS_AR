@@ -17,6 +17,7 @@
 		D335F00F1C4A2B2C00AA2AB7 /* iOS_AR_2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D335F00E1C4A2B2C00AA2AB7 /* iOS_AR_2UITests.m */; };
 		D3BDFAAF1C4A507F0064F6E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BDFAAE1C4A507F0064F6E9 /* CoreLocation.framework */; };
 		D3BDFAB11C4A62C10064F6E9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BDFAB01C4A62C10064F6E9 /* AVFoundation.framework */; };
+		D3BDFAB31C4A7E9C0064F6E9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BDFAB21C4A7E9C0064F6E9 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D335F0101C4A2B2C00AA2AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3BDFAAE1C4A507F0064F6E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D3BDFAB01C4A62C10064F6E9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D3BDFAB21C4A7E9C0064F6E9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BDFAB31C4A7E9C0064F6E9 /* CoreMotion.framework in Frameworks */,
 				D3BDFAB11C4A62C10064F6E9 /* AVFoundation.framework in Frameworks */,
 				D3BDFAAF1C4A507F0064F6E9 /* CoreLocation.framework in Frameworks */,
 			);
@@ -87,6 +90,7 @@
 		D335EFDD1C4A2B2A00AA2AB7 = {
 			isa = PBXGroup;
 			children = (
+				D3BDFAB21C4A7E9C0064F6E9 /* CoreMotion.framework */,
 				D3BDFAB01C4A62C10064F6E9 /* AVFoundation.framework */,
 				D3BDFAAE1C4A507F0064F6E9 /* CoreLocation.framework */,
 				D335EFE81C4A2B2A00AA2AB7 /* iOS_AR_2 */,

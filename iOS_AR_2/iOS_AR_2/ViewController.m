@@ -182,7 +182,26 @@
                                             otherButtonTitles:nil, nil];
         [alert show];
     }
-
+    
+    
+    /////////////////////////////////////////////////////////////////////////////////
+    //////////////////  [5] Check for gyroscope availability  ///////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
+    if ([self isGyroscopeAvailable]){
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Gyroscope "
+                                                      message:@"is  availabe"
+                                                     delegate:self
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil, nil];
+        [alert show];
+    }else{
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Gyroscope"
+                                                      message:@"is not availabe"
+                                                     delegate:self
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil, nil];
+        [alert show];
+    }
 
 }
 
@@ -192,13 +211,24 @@
     UIImagePickerController *picker = [[UIImagePickerController alloc]init];
     NSArray *sourceTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
     
-    if(![sourceTypes containsObject:(NSString *)kUTTypeMovie])
+    if(![sourceTypes containsObject:(NSString *)kUTTypeMovie]) // kUTTypeMovie means that video is supported
     {
         return NO;
     }
     
     return YES;
     
+}
+
+-(BOOL) isGyroscopeAvailable{
+#ifdef __IPHONE_4_0 //because it was not available for previous versions
+    CMMotionManager * motionManager = [[CMMotionManager alloc] init];
+    BOOL gyroscopeAvailable = motionManager.gyroAvailable;
+    
+    return gyroscopeAvailable;
+#else
+    return NO;
+#endif
 }
 
 - (void)didReceiveMemoryWarning {

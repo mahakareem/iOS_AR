@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h> // to be able to call CLLocationManager/ digital compus
 #import <AVFoundation/AVFoundation.h> // sound 
 #import <MobileCoreServices/UTCoreTypes.h> // video capability
-#import <CoreMotion/CoreMotion.h>
+#import <CoreMotion/CoreMotion.h> //gyrpscope / accelerometer
 
 
 @interface ViewController : UIViewController{
@@ -20,6 +20,7 @@
 
 
 - (BOOL) isVideoCameraAvailable;
+- (BOOL) isGyroscopeAvailable;
 
 
 @end
