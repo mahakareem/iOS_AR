@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import <MobileCoreServices/UTCoreTypes.h>
+#import <CoreLocation/CoreLocation.h> // to be able to call CLLocationManager/ digital compus
+#import <AVFoundation/AVFoundation.h> // sound 
+#import <MobileCoreServices/UTCoreTypes.h> // video capability
 #import <CoreMotion/CoreMotion.h>
 
 
@@ -18,7 +19,7 @@
 }
 
 
-//- (BOOL) isVideoCameraAvailable;
+- (BOOL) isVideoCameraAvailable;
 
 
 @end

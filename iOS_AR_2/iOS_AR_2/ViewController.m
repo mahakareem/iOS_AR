@@ -18,10 +18,13 @@
     [super viewDidLoad];
     
     
-    //Check camera
-    BOOL cameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    /////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////  [1] Check for camera  presence ///////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
+    
+    BOOL cameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]; //rear camera
  
-    BOOL frontCameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerCameraDeviceFront];
+    BOOL frontCameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerCameraDeviceFront]; //front camera
     
     
     if (cameraAvailable) {
@@ -112,10 +115,91 @@
         
     }
     
+    //////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////  [2] Check for digital compus  //////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
     
+    BOOL magnetometerAvailable = [CLLocationManager headingAvailable];
+    
+    if(magnetometerAvailable){
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Magnetometer"
+                                                      message:@"is availabe"
+                                                     delegate:self
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil, nil];
+        [alert show];
+    } else{
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Magnetometer"
+                                                      message:@"is not availabe"
+                                                     delegate:self
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil, nil];
+        [alert show];
+    
+        
+    }
+    
+    /////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////  [3] Check for audio/sound  /////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    BOOL audioAvailable = audioSession.inputIsAvailable;
+    
+    if(audioAvailable){
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Audio"
+                                                      message:@"is availabe"
+                                                     delegate:self
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil, nil];
+        [alert show];
+        
+        
+    }else{
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Audio"
+                                                      message:@"is not availabe"
+                                                     delegate:self
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    /////////////////////////////////////////////////////////////////////////////////
+    ///////////////////  [4] Check for video capabilities  //////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
+    if([self isVideoCameraAvailable]){
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Video "
+                                                      message:@"is  availabe"
+                                                     delegate:self
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil, nil];
+        [alert show];
+    }else{
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Video"
+                                                      message:@"is not availabe"
+                                                     delegate:self
+                                            cancelButtonTitle:@"ok"
+                                            otherButtonTitles:nil, nil];
+        [alert show];
+    }
+
+
 }
 
 
+
+- (BOOL) isVideoCameraAvailable{
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    NSArray *sourceTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
+    
+    if(![sourceTypes containsObject:(NSString *)kUTTypeMovie])
+    {
+        return NO;
+    }
+    
+    return YES;
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
