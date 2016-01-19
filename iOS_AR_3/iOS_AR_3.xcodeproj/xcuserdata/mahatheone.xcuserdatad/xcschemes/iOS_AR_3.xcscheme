@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D384381C1C4E8DCD007BACED"
+               BlueprintIdentifier = "D384385E1C4EAA7C007BACED"
                BuildableName = "iOS_AR_3.app"
                BlueprintName = "iOS_AR_3"
                ReferencedContainer = "container:iOS_AR_3.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D38438381C4E8DCD007BACED"
+               BlueprintIdentifier = "D384387A1C4EAA7D007BACED"
                BuildableName = "iOS_AR_3Tests.xctest"
                BlueprintName = "iOS_AR_3Tests"
                ReferencedContainer = "container:iOS_AR_3.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D38438431C4E8DCD007BACED"
+               BlueprintIdentifier = "D38438851C4EAA7D007BACED"
                BuildableName = "iOS_AR_3UITests.xctest"
                BlueprintName = "iOS_AR_3UITests"
                ReferencedContainer = "container:iOS_AR_3.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D384381C1C4E8DCD007BACED"
+            BlueprintIdentifier = "D384385E1C4EAA7C007BACED"
             BuildableName = "iOS_AR_3.app"
             BlueprintName = "iOS_AR_3"
             ReferencedContainer = "container:iOS_AR_3.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D384381C1C4E8DCD007BACED"
+            BlueprintIdentifier = "D384385E1C4EAA7C007BACED"
             BuildableName = "iOS_AR_3.app"
             BlueprintName = "iOS_AR_3"
             ReferencedContainer = "container:iOS_AR_3.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D384381C1C4E8DCD007BACED"
+            BlueprintIdentifier = "D384385E1C4EAA7C007BACED"
             BuildableName = "iOS_AR_3.app"
             BlueprintName = "iOS_AR_3"
             ReferencedContainer = "container:iOS_AR_3.xcodeproj">
