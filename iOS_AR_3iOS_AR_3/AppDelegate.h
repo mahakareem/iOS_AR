@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  AppDelegate.h
 //  iOS_AR_3
 //
 //  Created by maha k on 23/1/16.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 
 @end
