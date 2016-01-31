@@ -17,8 +17,8 @@
 
 - (void)viewDidLoad {
     
-    [self startStandardUpdates];
-    [self startRegionaMonitoring];
+    [self startStandardUpdates];        //to start location service
+    [self startRegionaMonitoring];      //Hi and By when near ictQATAR
 
     [super viewDidLoad];
     
@@ -47,7 +47,7 @@
     
     currentlocation = [[CLLocation alloc] initWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude];
     
-    ictQATARloc = [[CLLocation alloc] initWithLatitude:25.31334 longitude:51.51878];
+    ictQATARloc = [[CLLocation alloc] initWithLatitude:25.31334 longitude:51.51878];//ictQATAR coordinate
     
     return [currentlocation distanceFromLocation:ictQATARloc];
     
@@ -126,18 +126,9 @@
 
 -(void)startRegionaMonitoring
 {
-    /*
-    CLLocationManager *locationManager = [[CLLocationManager alloc]init];
-    locationManager.delegate = self;
-    
-    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(25.31334, 51.51878); //ictQATAR coordinates
-    CLRegion *region = [[CLRegion alloc]initCircularRegionWithCenter:coord radius:1000.0 identifier:@"ictQATAR"];
-    [locationManager startMonitoringForRegion:region desiredAccuracy:kCLLocationAccuracyHundredMeters];
-    
-    */
-    
-    
-    //1st : make sure of the permission is set to always. while driving is not enough :(
+
+    /*1st : make sure of the permission is set to always. "while driving" is not enough :(
+      it should work in the background*/
     switch ([CLLocationManager authorizationStatus]) {
         case kCLAuthorizationStatusNotDetermined:
         case kCLAuthorizationStatusAuthorizedWhenInUse:
@@ -203,8 +194,8 @@
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
-    UIAlertView *alert= [[ UIAlertView alloc]initWithTitle:@"ictQATAR Alert" message:@"ictQATAR is near" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] ;
     
+    UIAlertView *alert= [[ UIAlertView alloc]initWithTitle:@"ictQATAR Alert" message:@"ictQATAR is near" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] ;
     
     [alert show];
 }
