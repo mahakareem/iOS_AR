@@ -7,8 +7,29 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "MapAnnotation.h"
 
-@interface SecondViewController : UIViewController
+
+#define MERCATOR_OFFSET 268435456
+#define MERCATOR_RADIUS 85445659.44705395
+
+@interface SecondViewController : UIViewController <MKMapViewDelegate>{
+                                    //declare that our class is an MKMapView delagate to handle updates from
+                                    //the map
+    IBOutlet MKMapView *mapView;
+    UISegmentedControl *buttonBarSegmentedControl;
+    
+}
+
+@property (nonatomic, retain)IBOutlet MKMapView *mapView;
+@property (nonatomic, retain)IBOutlet UISegmentedControl *buttonBarSegmentedControl;
+
+
+- (double)longitudeToPixelSpaceX:(double)longitude;
+- (void)initSegmentedControl;
+
+- (IBAction)setupSegmentedControl:(id)sender;
 
 
 @end

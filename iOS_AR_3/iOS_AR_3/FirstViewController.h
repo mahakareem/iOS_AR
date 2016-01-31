@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
+#import <CoreLocation/CoreLocation.h> //for the coordinates
 
 
 @interface FirstViewController : UIViewController <CLLocationManagerDelegate>{
+    
     UILabel *locationTextLabel, *locationAltitude,*latitudeLabel,*longitudeLabel,*altitudeLabel;
 
     CLLocationManager *locationManager;
