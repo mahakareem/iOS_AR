@@ -61,13 +61,7 @@
         
     }
     else {
-        /*
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Camera"
-                                                                        message:@"Camera not detected" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Fine" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){}];
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-        */
+
         UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"camera"
                                                        message:@"not availabe"
                                                       delegate:self
@@ -79,17 +73,7 @@
     
     
     if (frontCameraAvailable) {
-        
-       /* UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Front Camera"
-                                                                       message:@"Front Camera is detected"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"alright?" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){}];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-        
-        */
+
         UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Front camera"
                                                        message:@"availabe"
                                                       delegate:self
@@ -99,13 +83,7 @@
         
     }
     else {
-        /*
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Front Camera"
-                                                                       message:@"Front Camera not detected" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Fine" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){}];
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-        */
+
         UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Front camera"
                                                        message:@"not availabe"
                                                       delegate:self
